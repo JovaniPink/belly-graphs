@@ -1,0 +1,59 @@
+{
+  "name": "belly-graphs",
+  "version": "1.0.0",
+  "description": "Belly Graphs on Biodiversity Data. Visualization done with Plotly.js.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JovaniPink/belly-graphs.git"
+  },
+  "homepage": "https://github.com/JovaniPink/belly-graphs#readme",
+  "scripts": {
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 static/scss/style.scss -o static/css/",
+    "css-prefix": "postcss --replace static/css/style.css --use autoprefixer --map",
+    "css-purge": "purgecss --css static/css/style.css --content index.html --output static/css/",
+    "css": "npm run css-compile && npm run css-prefix",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --out-dir docs",
+    "test": "npm run css"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "javascript",
+    "d3.js",
+    "ployly.js",
+    "dashboard"
+  ],
+  "author": "Jovani Pink",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "3.5.1",
+    "bootstrap": "4.5.2",
+    "popper.js": "1.16.1-lts",
+    "d3": "6.2.0",
+    "plotly.js": "1.55.2",
+    "xstate": "4.11.0",
+    "postcss": "8.1.1"
+  },
+  "devDependencies": {
+    "@types/autoprefixer": "9.7.2",
+    "@types/bootstrap": "4.5.0",
+    "@types/d3": "5.16.2",
+    "@types/jquery": "3.5.1",
+    "@types/plotly.js": "1.36.0",
+    "@types/node": "14.11.2",
+    "@types/node-sass": "4.11.1",
+    "@types/babel-core": "6.25.3",
+    "@types/prettier": "2.1.1",
+    "autoprefixer": "10.0.1",
+    "node-sass": "4.14.1",
+    "postcss-cli": "8.0.0",
+    "purgecss": "3.0.0",
+    "parcel-bundler": "1.12.4",
+    "@babel/core": "7.2.0",
+    "prettier": "2.1.2"
+  },
+  "engines": {
+    "node": ">= 10.19.0"
+  }
+}
