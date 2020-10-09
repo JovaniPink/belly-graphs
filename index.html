@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!--
+        The above 2 meta tags *must* come first in the <head>
+        to consistently ensure proper document rendering.
+        Any other head element should come *after* these tags.
+      -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Title -->
+    <title>Belly Graphs</title>
+
+    <!-- Seo -->
+    <!-- Short description of the document (limit to 150 characters) -->
+    <!-- This content *may* be used as a part of search engine results. -->
+    <meta name="description" content="Bacteria in Belly Buttons" />
+    <meta name="belly-graphs" content="belly-graphs" />
+    <meta name="theme-color" content="#211a23" />
+
+    <!-- Verify website ownership -->
+    <meta name="google-site-verification" content="verification_token" />
+    <!-- Google Search Console -->
+    <meta name="msvalidate.01" content="verification_token" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/favicon/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/favicon/favicon-32x32.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/favicon/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="/static/favicon/site.webmanifest" />
+
+    <!-- Facebook -->
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Belly Graphs" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="Photo of Cells" />
+    <meta property="og:description" content="Bacteria in Belly Buttons" />
+    <meta property="og:site_name" content="Belly Graphs" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="article:author"
+      content="https://www.facebook.com/JOVANIPINK"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="Belly Graphs" />
+    <meta name="twitter:creator" content="@JovaniPink" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:title" content="Belly Graphs" />
+    <meta name="twitter:description" content="Bacteria in Belly Buttons" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:image:alt" content="Photo of Cells" />
+
+    <!-- CSS only
+    <link rel="stylesheet" href="/static/css/style.css" /> -->
+  </head>
+
+  <body>
+    <!-- Switch JS -->
+    <script src="./static/js/theme-switch.js"></script>
+    <script>
+      const themeConfig = new ThemeConfig();
+      themeConfig.initTheme();
+    </script>
+    <header class="bg-dark text-light pt-5 pb-5">
+      <div class="container">
+        <h1 class="display-3">Belly Button Biodiversity</h1>
+        <h2 class="display-6 text-secondary">
+          Use the interactive charts below to explore the dataset
+        </h2>
+      </div>
+    </header>
+
+    <!-- BEGIN INSERTION -->
+    <script>
+      writeDarkSwitch(themeConfig);
+    </script>
+    <!-- END INSERTION -->
+
+    <main>
+      <!-- Content section -->
+      <section class="py-5 bg-dark text-light">
+        <div class="container">
+          <h1>Section Heading</h1>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+            suscipit, rerum quos facilis repellat architecto commodi officia
+            atque nemo facere eum non illo voluptatem quae delectus odit vel
+            itaque amet.
+          </p>
+        </div>
+        <!-- / .container-->
+      </section>
+
+      <section id="" class="pt-14 pt-md-14 pb-15 pb-md-15 mt-md-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card shadow p-3 mb-5 bg-white rounded">
+                <h4 class="card-title m-3">Test Subject ID</h4>
+                <div class="card-header">
+                  <form>
+                    <div class="form-group">
+                      <label class="" for="selDataset"
+                        >Select Subject ID:</label
+                      >
+                      <select class="form-control" id="selDataset"></select>
+                    </div>
+                  </form>
+                </div>
+                <h4 class="card-title m-3">Demographic Notes</h4>
+                <div id="sample-metadata" class="card-body"></div>
+                <div class="card-footer text-muted">Test</div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div id="bar"></div>
+            </div>
+          </div>
+          <!-- / .row -->
+        </div>
+        <!-- / .container-->
+      </section>
+
+      <!-- Content section -->
+      <section class="py-5 bg-dark text-light">
+        <div class="container">
+          <h1>Section Heading</h1>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+            suscipit, rerum quos facilis repellat architecto commodi officia
+            atque nemo facere eum non illo voluptatem quae delectus odit vel
+            itaque amet.
+          </p>
+        </div>
+      </section>
+
+      <section id="" class="pt-12 pt-md-14 pb-12 pb-md-15 mt-md-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div id="gauge"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow p-3 mb-5 bg-white rounded">
+                <h4 class="card-title m-3">Test Subject ID</h4>
+                <div class="card-header">
+                  <form>
+                    <div class="form-group">
+                      <label class="" for="selDataset"
+                        >Select Subject ID:</label
+                      >
+                      <select class="form-control" id="selDataset"></select>
+                    </div>
+                  </form>
+                </div>
+                <h4 class="card-title m-3">Demographic Notes</h4>
+                <div id="sample-metadata" class="card-body"></div>
+                <div class="card-footer text-muted">Test</div>
+              </div>
+            </div>
+          </div>
+          <!-- / .row -->
+        </div>
+        <!-- / .container-->
+      </section>
+
+      <!-- Content section -->
+      <section class="py-5 bg-dark text-light">
+        <div class="container">
+          <h1>Section Heading</h1>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+            suscipit, rerum quos facilis repellat architecto commodi officia
+            atque nemo facere eum non illo voluptatem quae delectus odit vel
+            itaque amet.
+          </p>
+        </div>
+      </section>
+
+      <section id="" class="pt-12 pt-md-14 pb-12 pb-md-15 mt-md-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div id="bubble"></div>
+            </div>
+          </div>
+          <!-- / .row -->
+        </div>
+        <!-- / .container-->
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- App JS -->
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

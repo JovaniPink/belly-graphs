@@ -13,7 +13,7 @@
     "css-purge": "purgecss --css static/css/style.css --content index.html --output static/css/",
     "css": "npm run css-compile && npm run css-prefix",
     "dev": "parcel index.html",
-    "build": "parcel build index.html --out-dir docs",
+    "build": "parcel build index.html --out-dir docs --public-url ./",
     "test": "npm run css"
   },
   "keywords": [
