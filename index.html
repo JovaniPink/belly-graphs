@@ -79,52 +79,42 @@
   </head>
 
   <body>
-    <!-- Switch JS -->
-    <script src="./static/js/theme-switch.js"></script>
-    <script>
-      const themeConfig = new ThemeConfig();
-      themeConfig.initTheme();
-    </script>
-    <header class="bg-dark text-light pt-5 pb-5">
+    <header class="bg-dark text-light py-5 mt-2 mb-2">
       <div class="container">
-        <h1 class="display-3">Belly Button Biodiversity</h1>
-        <h2 class="display-6 text-secondary">
-          Use the interactive charts below to explore the dataset
+        <div class="custom-control custom-switch float-right">
+          <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+          <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+        </div>
+        <h1 class="display-1">Belly Button Biodiversity</h1>
+        <h2 class="display-6">
+          Use the interactive charts below to explore the dataset.
         </h2>
       </div>
     </header>
 
-    <!-- BEGIN INSERTION -->
-    <script>
-      writeDarkSwitch(themeConfig);
-    </script>
-    <!-- END INSERTION -->
-
     <main>
       <!-- Content section -->
-      <section class="py-5 bg-dark text-light">
+      <section class="py-5">
         <div class="container">
-          <h1>Section Heading</h1>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-            suscipit, rerum quos facilis repellat architecto commodi officia
-            atque nemo facere eum non illo voluptatem quae delectus odit vel
-            itaque amet.
-          </p>
+          <div class="section-heading text-center">
+            <h2>Ten most commonly found bacteria</h2>
+            <p class="text-muted">
+              Each of her volunteers carries a variety of bacterial species in
+              his or her belly button.
+            </p>
+            <hr />
+          </div>
         </div>
         <!-- / .container-->
       </section>
 
-      <section id="" class="pt-14 pt-md-14 pb-15 pb-md-15 mt-md-6">
+      <section id="" class="py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
               <div class="card shadow p-3 mb-5 bg-white rounded">
                 <h4 class="card-title m-3">Test Subject ID</h4>
-                <div class="card-header">
+                <div class="card-header bg-white">
                   <form>
                     <div class="form-group">
                       <label class="" for="selDataset"
@@ -136,7 +126,6 @@
                 </div>
                 <h4 class="card-title m-3">Demographic Notes</h4>
                 <div id="sample-metadata" class="card-body"></div>
-                <div class="card-footer text-muted">Test</div>
               </div>
             </div>
             <div class="col-md-8">
@@ -149,9 +138,9 @@
       </section>
 
       <!-- Content section -->
-      <section class="py-5 bg-dark text-light">
+      <section class="py-5">
         <div class="container">
-          <h1>Section Heading</h1>
+          <h2>Section Heading</h2>
           <p class="lead">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
@@ -161,10 +150,11 @@
             atque nemo facere eum non illo voluptatem quae delectus odit vel
             itaque amet.
           </p>
+          <hr />
         </div>
       </section>
 
-      <section id="" class="pt-12 pt-md-14 pb-12 pb-md-15 mt-md-5">
+      <section id="" class="py-5">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -172,20 +162,12 @@
             </div>
             <div class="col-md-4">
               <div class="card shadow p-3 mb-5 bg-white rounded">
-                <h4 class="card-title m-3">Test Subject ID</h4>
-                <div class="card-header">
-                  <form>
-                    <div class="form-group">
-                      <label class="" for="selDataset"
-                        >Select Subject ID:</label
-                      >
-                      <select class="form-control" id="selDataset"></select>
-                    </div>
-                  </form>
+                <div class="card-body">
+                  <h4 class="card-title m-3">Frequency of washing</h4>
+                  Captured in the data set of 153 participants are represented
+                  the frequency of washing which we've captured using a Gauge
+                  Chart.
                 </div>
-                <h4 class="card-title m-3">Demographic Notes</h4>
-                <div id="sample-metadata" class="card-body"></div>
-                <div class="card-footer text-muted">Test</div>
               </div>
             </div>
           </div>
@@ -195,26 +177,144 @@
       </section>
 
       <!-- Content section -->
-      <section class="py-5 bg-dark text-light">
+      <section id="" class="py-5">
         <div class="container">
-          <h1>Section Heading</h1>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-            suscipit, rerum quos facilis repellat architecto commodi officia
-            atque nemo facere eum non illo voluptatem quae delectus odit vel
-            itaque amet.
-          </p>
+          <div class="section-heading text-center">
+            <h2>
+              Factors of age, sex, ethnicity, innie vs outie, and frequency of
+              washing
+            </h2>
+            <p class="text-muted">
+              ... yet none of the factors explained differences in the number
+              and kinds of bacteria we found in a particular person.
+            </p>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-lg-4 my-auto">
+              <div class="p-2">
+                <img
+                  src="static/images/cell.png"
+                  class="img-fluid shadow p-3 mb-5 bg-white rounded"
+                  alt="Picture of a Cell."
+                />
+              </div>
+            </div>
+            <div class="col-lg-8 my-auto">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="feature-item p-2">
+                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div
+                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                              >
+                                Age
+                              </div>
+                              <div
+                                class="h5 mb-0 font-weight-bold text-gray-800"
+                              >
+                                40,000
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="feature-item p-2">
+                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div
+                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                              >
+                                Age
+                              </div>
+                              <div
+                                class="h5 mb-0 font-weight-bold text-gray-800"
+                              >
+                                40,000
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- / .row -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="feature-item p-2">
+                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div
+                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                              >
+                                Age
+                              </div>
+                              <div
+                                class="h5 mb-0 font-weight-bold text-gray-800"
+                              >
+                                40,000
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="feature-item p-2">
+                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div
+                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                              >
+                                Age
+                              </div>
+                              <div
+                                class="h5 mb-0 font-weight-bold text-gray-800"
+                              >
+                                40,000
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- / .row -->
+              </div>
+            </div>
+          </div>
+          <!-- / .row -->
         </div>
+        <!-- / .container-->
       </section>
 
-      <section id="" class="pt-12 pt-md-14 pb-12 pb-md-15 mt-md-5">
+      <section id="" class="py-5">
         <div class="container">
           <div class="row">
             <div class="col">
               <div id="bubble"></div>
+              <div>
+                <p class="text-center">
+                  2368 total phylotypes, 2188 were present on less than 10% of
+                  individuals sampled.
+                </p>
+              </div>
             </div>
           </div>
           <!-- / .row -->
@@ -224,16 +324,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5">
       <div class="container">
-        <p class="m-0 text-center text-white">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <p class="m-0 text-center">
+          Contribute on Github
+          <a
+            href="https://github.com/JovaniPink/belly-graphs"
+            target="blank"
+            rel="noopener noreferrer"
+            >Belly Graphs</a
+          >.
         </p>
       </div>
       <!-- /.container -->
     </footer>
 
     <!-- App JS -->
+    <script src="./static/js/theme-switch.js"></script>
     <script src="/static/js/app.js"></script>
   </body>
 </html>

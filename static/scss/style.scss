@@ -381,3 +381,10 @@ $form-addon-bg: $default-header-bg;
 //
 // Custom styles
 //
+
+header {
+  background-image: url("../images/cell.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}

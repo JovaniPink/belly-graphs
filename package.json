@@ -30,10 +30,11 @@
     "jquery": "3.5.1",
     "popper.js": "1.16.1-lts",
     "bootstrap": "4.5.2",
+    "bootstrap-icons": "1.0.0",
     "d3": "6.2.0",
     "plotly.js": "1.56.0",
-    "xstate": "4.13.0",
-    "postcss": "8.1.1"
+    "postcss": "8.1.1",
+    "xstate": "4.13.0"
   },
   "devDependencies": {
     "@types/jquery": "3.5.2",
