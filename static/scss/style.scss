@@ -383,8 +383,23 @@ $form-addon-bg: $default-header-bg;
 //
 
 header {
-  background-image: url("../images/cell.jpg");
+  // background: linear-gradient(
+  //     to bottom,
+  //     rgba(92, 77, 66, 0.8) 15%,
+  //     rgba(92, 77, 66, 0.8) 75%
+  //   ),
+  //   url('../images/cell.jpg');
+  background-image: url('../images/cell.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  opacity: 0.8;
+}
+
+.bg-theme-color {
+  color: #2454a4;
+}
+
+.bg-theme-acc-color {
+  background-color: #ffa600;
 }

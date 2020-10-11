@@ -79,13 +79,14 @@
   </head>
 
   <body>
-    <header class="bg-dark text-light py-5 mt-2 mb-2">
+    <header class="bg-dark text-light py-5">
       <div class="container">
         <div class="custom-control custom-switch float-right">
           <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
           <input type="checkbox" class="custom-control-input" id="darkSwitch" />
         </div>
-        <h1 class="display-1">Belly Button Biodiversity</h1>
+        <h1 class="display-2">Belly Button Biodiversity</h1>
+        <hr class="bg-theme-acc-color" />
         <h2 class="display-6">
           Use the interactive charts below to explore the dataset.
         </h2>
@@ -96,23 +97,23 @@
       <!-- Content section -->
       <section class="py-5">
         <div class="container">
-          <div class="section-heading text-center">
-            <h2>Ten most commonly found bacteria</h2>
-            <p class="text-muted">
-              Each of her volunteers carries a variety of bacterial species in
-              his or her belly button.
-            </p>
-            <hr />
-          </div>
+          <h2 class="display-5 bg-theme-color">
+            Ten most commonly found bacteria
+          </h2>
+          <p>
+            Each of her volunteers carries a variety of bacterial species in his
+            or her belly button.
+          </p>
+          <hr class="bg-theme-acc-color" />
         </div>
         <!-- / .container-->
       </section>
 
-      <section id="" class="py-5">
+      <section id="" class="pb-5">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card shadow p-3 mb-5 bg-white rounded border-0">
                 <h4 class="card-title m-3">Test Subject ID</h4>
                 <div class="card-header bg-white">
                   <form>
@@ -140,33 +141,32 @@
       <!-- Content section -->
       <section class="py-5">
         <div class="container">
-          <h2>Section Heading</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
+          <h2 class="display-5 bg-theme-color">Data point of washing</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-            suscipit, rerum quos facilis repellat architecto commodi officia
-            atque nemo facere eum non illo voluptatem quae delectus odit vel
-            itaque amet.
+            Using a Gage Chart we update the count whenever a new 'Test Subject
+            ID' is selected. Gauge charts are very similar to Pie charts, with
+            the inclusion of needle to indicate the current data point of
+            washing.
           </p>
-          <hr />
+          <hr class="bg-theme-acc-color" />
         </div>
       </section>
 
-      <section id="" class="py-5">
+      <section id="" class="pb-5">
         <div class="container">
           <div class="row">
             <div class="col">
-              <div id="gauge"></div>
+              <div class="m-auto" id="gauge"></div>
             </div>
             <div class="col-md-4">
-              <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card shadow p-3 mb-5 bg-white rounded border-0">
+                <h4 class="card-title m-3">Frequency of washing</h4>
                 <div class="card-body">
-                  <h4 class="card-title m-3">Frequency of washing</h4>
-                  Captured in the data set of 153 participants are represented
-                  the frequency of washing which we've captured using a Gauge
-                  Chart.
+                  <p>
+                    Captured in the data set of 153 participants are represented
+                    the frequency of washing which we've captured using a Gauge
+                    Chart.
+                  </p>
                 </div>
               </div>
             </div>
@@ -179,19 +179,18 @@
       <!-- Content section -->
       <section id="" class="py-5">
         <div class="container">
-          <div class="section-heading text-center">
-            <h2>
-              Factors of age, sex, ethnicity, innie vs outie, and frequency of
-              washing
+          <div class="section-heading">
+            <h2 class="display-5 bg-theme-color">
+              Factors of age, sex, ethnicity, and innie vs outie
             </h2>
-            <p class="text-muted">
-              ... yet none of the factors explained differences in the number
-              and kinds of bacteria we found in a particular person.
+            <p>
+              Yet none of the factors explained differences in the number and
+              kinds of bacteria we found in a particular person.
             </p>
-            <hr />
+            <hr class="bg-theme-acc-color" />
           </div>
           <div class="row">
-            <div class="col-lg-4 my-auto">
+            <div class="col-md-6 my-auto">
               <div class="p-2">
                 <img
                   src="static/images/cell.png"
@@ -200,17 +199,19 @@
                 />
               </div>
             </div>
-            <div class="col-lg-8 my-auto">
+            <div class="col-md-6 my-auto">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="feature-item p-2">
-                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                      <div
+                        class="card shadow p-3 mb-5 bg-white rounded h-100 border-0"
+                      >
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                               <div
-                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                                class="text-xs font-weight-bold bg-theme-color text-uppercase mb-1"
                               >
                                 Age
                               </div>
@@ -227,14 +228,16 @@
                   </div>
                   <div class="col-lg-6">
                     <div class="feature-item p-2">
-                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                      <div
+                        class="card shadow p-3 mb-5 bg-white rounded h-100 border-0"
+                      >
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                               <div
-                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                                class="text-xs font-weight-bold bg-theme-color text-uppercase mb-1"
                               >
-                                Age
+                                Sex
                               </div>
                               <div
                                 class="h5 mb-0 font-weight-bold text-gray-800"
@@ -252,14 +255,16 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="feature-item p-2">
-                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                      <div
+                        class="card shadow p-3 mb-5 bg-white rounded h-100 border-0"
+                      >
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                               <div
-                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                                class="text-xs font-weight-bold bg-theme-color text-uppercase mb-1"
                               >
-                                Age
+                                Ethnicity
                               </div>
                               <div
                                 class="h5 mb-0 font-weight-bold text-gray-800"
@@ -274,14 +279,16 @@
                   </div>
                   <div class="col-lg-6">
                     <div class="feature-item p-2">
-                      <div class="card shadow p-3 mb-5 bg-white rounded h-100">
+                      <div
+                        class="card shadow p-3 mb-5 bg-white rounded h-100 border-0"
+                      >
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                               <div
-                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                                class="text-xs font-weight-bold bg-theme-color text-uppercase mb-1"
                               >
-                                Age
+                                Innie vs Outie
                               </div>
                               <div
                                 class="h5 mb-0 font-weight-bold text-gray-800"
@@ -304,17 +311,23 @@
         <!-- / .container-->
       </section>
 
-      <section id="" class="py-5">
+      <!-- Content section -->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="display-5 bg-theme-color">Biodiversity</h2>
+          <p>
+            2368 total Phylotypes, 2188 were present on less than 10% of
+            individuals sampled.
+          </p>
+          <hr class="bg-theme-acc-color" />
+        </div>
+      </section>
+
+      <section id="" class="pb-5">
         <div class="container">
           <div class="row">
             <div class="col">
               <div id="bubble"></div>
-              <div>
-                <p class="text-center">
-                  2368 total phylotypes, 2188 were present on less than 10% of
-                  individuals sampled.
-                </p>
-              </div>
             </div>
           </div>
           <!-- / .row -->
@@ -326,7 +339,7 @@
     <!-- Footer -->
     <footer class="py-5">
       <div class="container">
-        <p class="m-0 text-center">
+        <p class="m-0">
           Contribute on Github
           <a
             href="https://github.com/JovaniPink/belly-graphs"

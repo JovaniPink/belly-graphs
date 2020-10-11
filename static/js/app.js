@@ -18,7 +18,7 @@ const tableData = data;
 // Importing the samples from sample.json
 import samples from './sample.json';
 
-// 1. Create the buildCharts function.
+// buildCharts function.
 function buildCharts(sample) {
   let sampleMetadata = Object.values(samples)[1];
   let sampleData = Object.values(samples)[2];
@@ -28,22 +28,35 @@ function buildCharts(sample) {
 
   let metaResult = metaArray[0];
   let result = resultArray[0];
-  console.log(result);
 
   let otuIDs = result.otu_ids;
   let otu_labels = result.otu_labels;
   let sample_values = result.sample_values;
 
   let yticks = otuIDs
-    .slice(0, 12)
+    .slice(0, 10)
     .map((otu_id) => ` OTU ${otu_id} `)
     .reverse();
 
   let barData = [
     {
       y: yticks,
-      x: sample_values.slice(0, 12).reverse(),
-      text: otu_labels.slice(0, 12).reverse(),
+      x: sample_values.slice(0, 10).reverse(),
+      text: otu_labels.slice(0, 10).reverse(),
+      marker: {
+        color: [
+          'rgb(36, 84, 164)',
+          'rgb(113, 83, 172)',
+          'rgb(169, 77, 167)',
+          'rgb(215, 72, 150)',
+          'rgb(248, 77, 123)',
+          'rgb(248, 77, 123)',
+          'rgb(255, 99, 92)',
+          'rgb(255, 131, 57)',
+          'rgb(255, 141, 45)',
+          'rgb(255, 166, 0)',
+        ],
+      },
       type: 'bar',
       orientation: 'h',
     },
@@ -51,7 +64,7 @@ function buildCharts(sample) {
   let barLayout = {
     title: {
       text: 'Top 10 Bacteria Cultures Found',
-      font: { size: 24 },
+      font: { size: 24, color: 'rgb(255, 166, 0)' },
     },
     autosize: true,
     height: 400,
@@ -60,26 +73,21 @@ function buildCharts(sample) {
   };
   Plotly.newPlot('bar', barData, barLayout);
 
-
   let washing_frequency = metaResult.wfreq;
   let gaugeData = [
     {
       domain: { x: [0, 1], y: [0, 1] },
       value: washing_frequency,
-      title: {
-        text: 'Belly Button Washing Frequency',
-        font: { size: 24 },
-      },
       type: 'indicator',
       mode: 'gauge+number',
       gauge: {
         axis: { range: [null, 10] },
         steps: [
-          { range: [0, 2], color: 'red' },
-          { range: [2, 4], color: 'orange' },
-          { range: [4, 6], color: 'yellow' },
-          { range: [6, 8], color: 'lightgreen' },
-          { range: [8, 10], color: 'green' },
+          { range: [0, 2], color: 'rgb(36, 84, 164)' },
+          { range: [2, 4], color: 'rgb(113, 83, 172)' },
+          { range: [4, 6], color: 'rgb(169, 77, 167)' },
+          { range: [6, 8], color: 'rgb(215, 72, 150)' },
+          { range: [8, 10], color: 'rgb(248, 77, 123)' },
         ],
         bar: { color: 'black' },
       },
@@ -87,17 +95,16 @@ function buildCharts(sample) {
   ];
 
   let gaugeLayout = {
+    title: {
+      text: 'Belly Button Washing Frequency',
+      font: { size: 24, color: 'rgb(169, 77, 167)' },
+    },
     autosize: true,
     height: 400,
-    margin: { t: 10, r: 10, l: 10, b: 10 },
+    xaxis: { automargin: true },
+    yaxis: { automargin: true },
   };
   Plotly.newPlot('gauge', gaugeData, gaugeLayout);
-
-
-
-
-
-
 
   let desired_maximum_marker_size = 100;
   let bubbleData = [
@@ -112,6 +119,10 @@ function buildCharts(sample) {
           (2.0 * Math.max(...sample_values)) / desired_maximum_marker_size ** 2,
         sizemode: 'area',
         color: otuIDs,
+        colorscale: [
+          [0, 'rgb(248, 77, 123)'],
+          [1, 'rgb(36, 84, 164)'],
+        ],
         opacity: 0.7,
       },
       type: 'scatter',
@@ -121,7 +132,7 @@ function buildCharts(sample) {
   let bubbleLayout = {
     title: {
       text: 'Bacteria Cultures Per Sample',
-      font: { size: 24 },
+      font: { size: 24, color: 'rgb(169, 77, 167)' },
     },
     autosize: true,
     height: 400,
@@ -130,9 +141,8 @@ function buildCharts(sample) {
     yaxis: { automargin: true },
   };
 
+  console.log(bubbleData['y']);
   Plotly.newPlot('bubble', bubbleData, bubbleLayout);
-
-
 }
 
 // Demographics Panel
@@ -159,6 +169,7 @@ function buildMetadata(sample) {
   });
 }
 
+// Initialize Function
 function init() {
   let dropdownSelector = Plotly.d3.select('#selDataset');
   let sampleNames = Object.values(samples)[0];
@@ -176,6 +187,7 @@ function init() {
 // Initialize the dashboard
 init();
 
+// Initialize event listener
 document.addEventListener('DOMContentLoaded', function (event) {
   Plotly.d3.select('#selDataset').on('change', function () {
     let newSample = this.value;
