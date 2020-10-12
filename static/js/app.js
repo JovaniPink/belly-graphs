@@ -64,8 +64,10 @@ function buildCharts(sample) {
   let barLayout = {
     title: {
       text: 'Top 10 Bacteria Cultures Found',
-      font: { size: 24, color: 'rgb(255, 166, 0)' },
+      font: { size: 24, color: 'rgb(33, 37, 41)' },
     },
+    paper_bgcolor: 'rgb(204, 205, 216, 1)',
+    plot_bgcolor: 'rgb(204, 205, 216, 1)',
     autosize: true,
     height: 400,
     xaxis: { automargin: true },
@@ -97,8 +99,10 @@ function buildCharts(sample) {
   let gaugeLayout = {
     title: {
       text: 'Belly Button Washing Frequency',
-      font: { size: 24, color: 'rgb(169, 77, 167)' },
+      font: { size: 24, color: 'rgb(33, 37, 41)' },
     },
+    paper_bgcolor: 'rgb(204, 227, 222, 1)',
+    plot_bgcolor: 'rgb(204, 227, 222, 1)',
     autosize: true,
     height: 400,
     xaxis: { automargin: true },
@@ -132,8 +136,10 @@ function buildCharts(sample) {
   let bubbleLayout = {
     title: {
       text: 'Bacteria Cultures Per Sample',
-      font: { size: 24, color: 'rgb(169, 77, 167)' },
+      font: { size: 24, color: 'rgb(33, 37, 41)' },
     },
+    paper_bgcolor: 'rgb(180, 180, 210, 1)',
+    plot_bgcolor: 'rgb(180, 180, 210, 1)',
     autosize: true,
     height: 400,
     hovermode: otu_labels,
