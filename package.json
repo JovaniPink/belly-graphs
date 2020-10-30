@@ -30,7 +30,7 @@
     "jquery": "3.5.1",
     "popper.js": "1.16.1-lts",
     "bootstrap": "4.5.3",
-    "bootstrap-icons": "1.0.0",
+    "bootstrap-icons": "1.1.0",
     "d3": "6.2.0",
     "plotly.js": "1.57.1",
     "postcss": "8.1.4",
