@@ -48,7 +48,7 @@
     "@types/prettier": "2.1.5",
     "autoprefixer": "10.0.1",
     "node-sass": "4.14.1",
-    "postcss-cli": "8.1.0",
+    "postcss-cli": "8.2.0",
     "purgecss": "3.0.0",
     "parcel-bundler": "1.12.4",
     "@babel/core": "7.12.3",
