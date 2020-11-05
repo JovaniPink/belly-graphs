@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/jquery": "3.5.4",
     "@types/bootstrap": "5.0.0",
-    "@types/d3": "5.16.4",
+    "@types/d3": "6.0.0",
     "@types/plotly.js": "1.54.2",
     "@types/node": "14.14.6",
     "@types/node-sass": "4.11.1",
