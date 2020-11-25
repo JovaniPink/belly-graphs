@@ -33,7 +33,7 @@
     "bootstrap-icons": "1.1.0",
     "d3": "6.2.0",
     "plotly.js": "1.57.1",
-    "postcss": "8.1.7",
+    "postcss": "8.1.10",
     "xstate": "4.14.0"
   },
   "devDependencies": {
