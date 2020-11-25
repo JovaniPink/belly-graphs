@@ -52,7 +52,7 @@
     "purgecss": "3.0.0",
     "parcel-bundler": "1.12.4",
     "@babel/core": "7.12.3",
-    "prettier": "2.1.2"
+    "prettier": "2.2.0"
   },
   "engines": {
     "node": ">= 10.19.0"
