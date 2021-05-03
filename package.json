@@ -51,7 +51,7 @@
     "postcss-cli": "8.3.1",
     "purgecss": "4.0.3",
     "parcel-bundler": "1.12.5",
-    "@babel/core": "7.13.15",
+    "@babel/core": "7.14.0",
     "prettier": "2.2.1"
   },
   "engines": {
