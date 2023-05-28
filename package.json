@@ -34,7 +34,7 @@
     "d3": "6.7.0",
     "plotly.js": "1.58.4",
     "postcss": "8.3.0",
-    "xstate": "4.19.1"
+    "xstate": "4.37.2"
   },
   "devDependencies": {
     "@types/jquery": "3.5.5",
