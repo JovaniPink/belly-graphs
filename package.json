@@ -31,7 +31,7 @@
     "popper.js": "1.16.1-lts",
     "bootstrap": "5.0.1",
     "bootstrap-icons": "1.5.0",
-    "d3": "6.7.0",
+    "d3": "7.9.0",
     "plotly.js": "1.58.4",
     "postcss": "8.3.0",
     "xstate": "4.19.1"
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/jquery": "3.5.5",
     "@types/bootstrap": "5.0.15",
-    "@types/d3": "6.7.0",
+    "@types/d3": "7.4.3",
     "@types/plotly.js": "1.54.10",
     "@types/node": "14.17.1",
     "@types/node-sass": "4.11.1",
