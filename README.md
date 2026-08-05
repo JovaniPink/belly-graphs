@@ -10,6 +10,8 @@
 
 Created an interactive dashboard to explore the Belly Button Biodiversity Data Set and completed an end-to-end analysis. Technologies used: HTML/CSS/Bootstrap, JavaScript Library Plotly, D3.js.
 
+The site builds with Vite on Node.js 20.19 or newer. Run `npm install`, then `npm run dev` for local development or `npm run build` to refresh the GitHub Pages output in `docs/`.
+
 ## Summary
 
 What species are present in your navel?

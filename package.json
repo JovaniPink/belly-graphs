@@ -1,6 +1,7 @@
 {
   "name": "belly-graphs",
   "version": "1.0.0",
+  "type": "module",
   "description": "Belly Graphs on Biodiversity Data. Visualization done with Plotly.js.",
   "repository": {
     "type": "git",
@@ -8,13 +9,10 @@
   },
   "homepage": "https://github.com/JovaniPink/belly-graphs#readme",
   "scripts": {
-    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 static/scss/style.scss -o static/css/",
-    "css-prefix": "postcss --replace static/css/style.css --use autoprefixer --map",
-    "css-purge": "purgecss --css static/css/style.css --content index.html --output static/css/",
-    "css": "npm run css-compile && npm run css-prefix",
-    "dev": "parcel index.html",
-    "build": "parcel build index.html --out-dir docs --public-url ./",
-    "test": "npm run css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vite build"
   },
   "keywords": [
     "bootstrap",
@@ -27,34 +25,17 @@
   "author": "Jovani Pink",
   "license": "MIT",
   "dependencies": {
-    "jquery": "3.6.0",
-    "popper.js": "1.16.1-lts",
-    "bootstrap": "5.0.1",
-    "bootstrap-icons": "1.5.0",
-    "d3": "6.7.0",
-    "plotly.js": "1.58.4",
-    "postcss": "8.3.0",
-    "xstate": "4.19.1"
+    "bootstrap": "5.3.8",
+    "d3": "7.9.0",
+    "plotly.js-dist-min": "3.7.0"
   },
   "devDependencies": {
-    "@types/jquery": "3.5.5",
-    "@types/bootstrap": "5.0.15",
-    "@types/d3": "6.7.0",
-    "@types/plotly.js": "1.54.10",
-    "@types/node": "14.17.1",
-    "@types/node-sass": "4.11.1",
-    "@types/autoprefixer": "9.7.2",
-    "@types/babel-core": "6.25.6",
-    "@types/prettier": "2.2.3",
-    "autoprefixer": "10.2.5",
-    "node-sass": "6.0.0",
-    "postcss-cli": "8.3.1",
-    "purgecss": "4.0.3",
-    "parcel-bundler": "1.12.5",
-    "@babel/core": "7.14.3",
-    "prettier": "2.3.0"
+    "prettier": "3.9.6",
+    "sass": "1.102.0",
+    "terser": "5.49.2",
+    "vite": "8.2.0"
   },
   "engines": {
-    "node": ">= 10.19.0"
+    "node": "^20.19.0 || >=22.12.0"
   }
 }

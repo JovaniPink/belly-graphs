@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'bootstrap/scss/bootstrap';
+
 //
 // Override Bootstrap's Sass default variables
 //
@@ -153,22 +156,22 @@ $form-addon-bg: $default-header-bg;
     &,
     &:focus,
     &:hover {
-      color: map_get($item-color, 'primary');
-      background-color: map_get($item-bg, 'primary');
-      border-color: map_get($item-bg, 'primary');
+      color: map.get($item-color, 'primary');
+      background-color: map.get($item-bg, 'primary');
+      border-color: map.get($item-bg, 'primary');
     }
   }
 
-  @each $name in map_keys($item-color) {
+  @each $name in map.keys($item-color) {
     .list-group-item-#{$name} {
-      color: map_get($item-color, $name);
-      background-color: map_get($item-bg, $name);
-      border-color: map_get($item-bg, $name);
+      color: map.get($item-color, $name);
+      background-color: map.get($item-bg, $name);
+      border-color: map.get($item-bg, $name);
 
       &.list-group-item-action:focus,
       &.list-group-item-action:hover {
-        color: map_get($item-color, $name);
-        background-color: map_get($item-hover, $name);
+        color: map.get($item-color, $name);
+        background-color: map.get($item-hover, $name);
       }
     }
   }
@@ -370,13 +373,6 @@ $form-addon-bg: $default-header-bg;
 [data-theme='dark'] {
   @include darkmode;
 }
-
-//
-// Bring in Bootstrap
-//
-
-// Import all of Bootstrap's CSS
-@import '~bootstrap/scss/bootstrap';
 
 //
 // Custom styles
