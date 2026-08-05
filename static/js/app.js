@@ -5,15 +5,10 @@ import 'bootstrap';
 import '../scss/style.scss';
 
 // Importing D3
-// We do not have to import D3 because Plotly has it available.
-// import * as d3 from "../../node_modules/d3/dist/d3.js";
+import * as d3 from 'd3';
 
-// Importing Ploy.js
-import Plotly from '../../node_modules/plotly.js/dist/plotly.js';
-
-// Importing the data from data.js
-import { data } from './data.js';
-const tableData = data;
+// Importing Plotly.js
+import Plotly from 'plotly.js-dist-min';
 
 // Importing the samples from sample.json
 import samples from './sample.json';
@@ -142,12 +137,11 @@ function buildCharts(sample) {
     plot_bgcolor: 'rgb(180, 180, 210, 1)',
     autosize: true,
     height: 400,
-    hovermode: otu_labels,
-    xaxis: { label: 'OTU ID', automargin: true },
+    hovermode: 'closest',
+    xaxis: { title: { text: 'OTU ID' }, automargin: true },
     yaxis: { automargin: true },
   };
 
-  console.log(bubbleData['y']);
   Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 }
 
@@ -162,7 +156,7 @@ function buildMetadata(sample) {
   let result = resultArray[0];
 
   // Use d3 to select the panel with id of `#sample-metadata`
-  let card = Plotly.d3.select('#sample-metadata');
+  let card = d3.select('#sample-metadata');
 
   // Use `.html("") to clear any existing metadata
   card.html('');
@@ -177,7 +171,7 @@ function buildMetadata(sample) {
 
 // Initialize Function
 function init() {
-  let dropdownSelector = Plotly.d3.select('#selDataset');
+  let dropdownSelector = d3.select('#selDataset');
   let sampleNames = Object.values(samples)[0];
 
   sampleNames.forEach((sample) => {
@@ -190,14 +184,26 @@ function init() {
   buildMetadata(firstSample);
 }
 
-// Initialize the dashboard
-init();
+function initializeThemeSwitch() {
+  const darkSwitch = document.querySelector('#darkSwitch');
+  const storedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
 
-// Initialize event listener
-document.addEventListener('DOMContentLoaded', function (event) {
-  Plotly.d3.select('#selDataset').on('change', function () {
-    let newSample = this.value;
-    buildCharts(newSample);
-    buildMetadata(newSample);
+  document.body.dataset.theme = initialTheme;
+  darkSwitch.checked = initialTheme === 'dark';
+  darkSwitch.addEventListener('change', () => {
+    const theme = darkSwitch.checked ? 'dark' : 'light';
+    document.body.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
   });
+}
+
+// Initialize the dashboard and event listeners after the module is loaded.
+init();
+initializeThemeSwitch();
+d3.select('#selDataset').on('change', function () {
+  let newSample = this.value;
+  buildCharts(newSample);
+  buildMetadata(newSample);
 });
